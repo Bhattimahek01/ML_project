@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardioGuard | AI Health Prediction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Side: Branding / Info -->
+        <div class="info-section">
+            <div class="brand">
+                <span>❤️</span> CardioGuard AI
+            </div>
+            <h1 class="title">Predict Your Heart Health instantly.</h1>
+            <p class="subtitle">
+                Advanced machine learning analysis of your vitals to detect cardiovascular risks early. 
+                Fast, private, and accurate.
+            </p>
+        </div>
+
+        <!-- Right Side: Form -->
+        <div class="form-section">
+            <div class="form-header">
+                <h2>Patient Vitals</h2>
+                <p>Enter details below for analysis</p>
+            </div>
+
+            <form id="prediction-form">
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label>Age (Years)</label>
+                        <input type="number" name="age" min="10" max="100" value="30" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Gender</label>
+                        <select name="gender">
+                            <option value="1">Male</option>
+                            <option value="2">Female</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Height (cm)</label>
+                        <input type="number" name="height" min="100" max="250" value="170" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Weight (kg)</label>
+                        <input type="number" name="weight" min="30" max="200" value="70" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Systolic BP (ap_hi)</label>
+                        <input type="number" name="ap_hi" min="60" max="240" value="120" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Diastolic BP (ap_lo)</label>
+                        <input type="number" name="ap_lo" min="40" max="180" value="80" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Cholesterol Level</label>
+                        <select name="cholesterol">
+                            <option value="1">Normal</option>
+                            <option value="2">Above Normal</option>
+                            <option value="3">Well Above Normal</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Glucose Level</label>
+                        <select name="gluc">
+                            <option value="1">Normal</option>
+                            <option value="2">Above Normal</option>
+                            <option value="3">Well Above Normal</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Smoking Status</label>
+                        <select name="smoke">
+                            <option value="0">Non-Smoker</option>
+                            <option value="1">Smoker</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Alcohol Intake</label>
+                        <select name="alco">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group full-width">
+                        <label>Physical Activity</label>
+                        <select name="active">
+                            <option value="1">Yes, Active</option>
+                            <option value="0">No, Sedentary</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Analyze Risk</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Result Modal -->
+    <div class="result-overlay" id="result-overlay">
+        <div class="result-card">
+            <div class="result-icon" id="result-icon"></div>
+            <div class="result-title" id="result-title"></div>
+            <div class="result-score" id="result-score"></div>
+            <button class="close-btn" id="close-result">Analyze Another</button>
+        </div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
